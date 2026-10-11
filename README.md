@@ -35,7 +35,7 @@ The 2026 crisis offers only a handful of clear events, the most extreme market d
 
 ## Technical details
 
-- **Event study (6 events, 2-day windows, baseline Jun 2025 – Jan 2026):** Bitcoin's abnormal returns were never significant (all |t| < 2). Oil moved +10.2% (t = 4.05) at the start of the war and −13.2% (t = −5.25) after the ceasefire.
+- **Event study (6 events, 2-day windows, baseline Jun 2025 – Jan 2026):** Bitcoin's abnormal returns were never significant (all |t| < 2). Oil moved +10.2% (t = 4.05) at the start of the war and −10.0% (t = −3.99) after the ceasefire.
 - **Gold's beta to the S&P 500:** about 0 in the calm period, rising by 0.78 during the war (interaction regression, p = 0.008, Newey-West standard errors). Its 2026 beta of 1.02 (95% CI 0.71 to 1.33) compares with 0.08 over 2019–2025, −0.59 after the June 2025 Israel–Iran strikes and −0.55 during the 2023 SVB collapse.
 - **Bitcoin's beta:** 1.14 in 2026, compared with 1.05 over 2019–2025. Against the Jun 2025 – Jan 2026 baseline (1.87), Bitcoin's beta fell during the war, but that baseline was unusually high.
 - **Correlations:** Bitcoin–gold rose from 0.10 to 0.43 (Fisher z-test, p = 0.001); Bitcoin–S&P 500 did not change significantly (p = 0.153). Correlations are treated as supporting evidence because they rise mechanically with volatility (Forbes and Rigobon, 2002).
