@@ -16,7 +16,7 @@ Bitcoin behaved like a risky investment rather than a safe haven, as it has sinc
 
 **Gold followed the stock market far more than usual.** Over 2019–2025 as a whole, gold's daily moves had little to do with stocks; during the conflict, the two often rose and fell together, with gold moving about as much as stocks. Compared over the same length of time, no other market shock since 2019 comes close, including a similar Israel–Iran conflict in June 2025, and the result is not driven by a handful of big market days.
 
-**But the change began before the war, and its size depends on the comparison.** Gold moved against stocks in the summer of 2025, and its link to stocks began rising around November 2025, about four months before the war, before peaking during the conflict. Measured against the winter months just before the war, the increase is roughly half as large as against June 2025 – January 2026. Against four different "before" periods it is always there, but clearly larger than chance for only two or three of them, depending on whether oil, the dollar and interest rates are taken into account.
+**But the change began before the war, and its size depends on the comparison.** Gold moved against stocks in the summer of 2025, and its link to stocks began rising around November 2025, about four months before the war, before peaking during the conflict. Measured against the winter months just before the war, the increase is roughly half as large as against June 2025 – January 2026. Against four different "before" periods it is always there, but clearly larger than chance for only two of them: the main period and the 180 days before the war.
 
 **The result holds with a direct measure of interest rates.** One possible reason for the change is that gold and stocks were both reacting to the same news about interest rates. Replacing the bond fund with the 10-year inflation-adjusted interest rate barely changes the result. Gold did become more sensitive to interest rates during the conflict, but allowing for this leaves its closer link with stocks in place. This cannot rule out every role for interest rates.
 
@@ -49,39 +49,23 @@ Whether an asset behaves as a hedge is not a fixed fact; it can change from one 
 - Event dates come from news timelines, and I did not check for other economic news released on the same days.
 - I use funds that track stocks, gold and oil as stand-ins for the assets themselves.
 
-## Technical details
+## Key numbers
 
-This section is for readers who want the exact numbers. **Beta** measures how much an asset moves when the S&P 500 moves by 1% (0 = no relation, 1 = one-for-one); CI is a 95% confidence interval. Model definitions are in the Technical notes at the end of the notebook.
+**Beta** measures how much an asset moves when the S&P 500 moves by 1% (0 = no relation, 1 = one-for-one); CI is a 95% confidence interval. The full table and model definitions are in the Technical notes at the end of the notebook.
 
-| Measure | Sample | Result |
-|---|---|---|
-| Gold's beta to the S&P 500, before period (Jun 2025 – Jan 2026) | 167 days | 0.08 (95% CI −0.29 to 0.44) |
-| Same, without its 5 largest S&P 500 days / summer (Jun – Aug 2025) / winter (Nov 2025 – Jan 2026) | 162 / 62 / 61 days | 0.25 (−0.15 to 0.66) / −0.36 (−0.70 to −0.02) / 0.56 (−0.15 to 1.27) |
-| Gold's beta to the S&P 500, conflict period (Mar 2 – Oct 9, 2026), S&P 500 only | 155 days | 1.02 (95% CI 0.71 to 1.33) |
-| Change in gold's beta, conflict vs. before period, S&P 500 only | 167 + 155 days | +0.94 (95% CI 0.47 to 1.41) |
-| Same change, S&P 500, oil, dollar and TIPS, all allowed to change | 167 + 155 days | +0.74 (95% CI 0.17 to 1.30) |
-| Change against the last 60 / 120 / 180 pre-war trading days, S&P 500 only | 60 / 120 / 180 + 155 days | +0.60 / +0.65 / +0.86 (p = 0.27 / 0.03 / 0.001) |
-| Same, all four factors allowed to change | 60 / 120 / 180 + 155 days | +0.55 / +0.48 / +0.66 (p = 0.25 / 0.15 / 0.03) |
-| Same change, 10-year real yield (FRED DFII10) in place of TIPS | 319 days | +0.74 (95% CI 0.17 to 1.31), vs. +0.77 with TIPS on the same days |
-| Gold's move per 10 bp rise in the 10-year real yield, before / conflict (full model) | 319 days | +0.00% / −0.45% |
-| Gold's 60-day rolling beta, end of Nov 2025 / Jan 2026 / Jun 2026 | 60-day windows | 0.33 / 0.56 / 1.22 |
-| Gold's beta, conflict period, without the 5 largest S&P 500 days / robust (Huber) regression | 150 / 155 days | 0.98 (95% CI 0.57 to 1.40) / 1.12 (95% CI 0.87 to 1.36) |
-| Gold's beta, first 40 trading days of the 2026 shock | 40 days | 0.93 (95% CI 0.52 to 1.33) |
-| Gold's beta, all days 2019–2025 | 1,759 days | 0.08 (95% CI 0.03 to 0.14) |
-| 2026 days with an S&P 500 log return below −1.78% (2019–2025 worst-5% threshold) | 2 days | Gold fell on both (average −3.7%, S&P 500 −2.2%) |
-| Gold on the worst 5% of S&P 500 days, 2019–2025 | about 88 days | Average −0.1% |
-| Bitcoin's beta to the S&P 500, all days 2019–2025 | 1,759 days | 1.05 (95% CI 0.75 to 1.36) |
-| Bitcoin's total beta, Baur–Lucey test, 2019–2025 | normal days vs. worst 1% | 0.84 vs. 1.58 |
-| Bitcoin's beta, conflict period (midnight UTC / 4 p.m. ET price) | 155 days | 1.14 (95% CI 0.76 to 1.52) / 1.38 |
-| Change in Bitcoin's beta, conflict vs. before period, S&P 500 only (midnight UTC / 4 p.m. ET price) | 167 + 155 days | −0.73 (95% CI −1.27 to −0.19) / −0.34 (95% CI −0.88 to 0.20) |
-| Bitcoin–gold correlation, before vs. conflict | 167 / 155 days | 0.10 vs. 0.43 (p = 0.001); partial correlation controlling for the S&P 500: 0.10 vs. 0.29 |
+| Measure | Result |
+|---|---|
+| Bitcoin's beta to the S&P 500, 2019–2025: normal days vs. worst 1% of days (Baur–Lucey test) | 0.84 vs. 1.58 |
+| Bitcoin's beta, 2026 conflict period (midnight UTC / 4 p.m. ET price) | 1.14 (95% CI 0.76 to 1.52) / 1.37 |
+| Gold's beta to the S&P 500, all days 2019–2025 | 0.08 (95% CI 0.03 to 0.14) |
+| Gold's beta, 2026 conflict period (Mar 2 – Oct 9) | 1.02 (95% CI 0.71 to 1.33) |
+| Change in gold's beta, conflict vs. Jun 2025 – Jan 2026 (S&P 500, oil, dollar and TIPS all allowed to change) | +0.74 (95% CI 0.17 to 1.30) |
+| Same change against the last 60 / 120 / 180 pre-war trading days | +0.55 / +0.48 / +0.66 (p = 0.25 / 0.15 / 0.03) |
+| Same change with the 10-year real interest rate in place of TIPS | +0.76 (95% CI 0.19 to 1.33) |
+| 2026 days with the S&P 500 in its 2019–2025 worst 5% | 2 days; gold fell on both (average −3.7%, S&P 500 −2.2%) |
+| Bitcoin–gold correlation, before vs. conflict | 0.10 vs. 0.43 (0.29 after removing stock-market moves) |
 
-The 1.02 and +0.74 are different statistics: the first is gold's beta within the conflict period from a model with the S&P 500 only; the second is the increase relative to the before period in a model with the S&P 500, oil, the dollar and TIPS, all allowed to change during the conflict.
-
-- **Units:** abnormal returns and CARs are sums of daily log returns × 100 (log percent); cumulative returns over episodes and stress-day averages are simple percentage changes.
-- **Event study, constant-mean model (2-day windows, CAR(0,+1)):** Bitcoin's abnormal returns were never significant (all |t| < 2). Oil moved +10.2% (t = 4.05) at the start of the war and −10.0% (t = −3.99) after the ceasefire.
-- **Event study, market model (1-, 2- and 3-day windows, empirical p-values, Holm-adjusted across 36 windows):** with the before-period beta, Bitcoin's abnormal return was +4.6% (p = 0.04) on the first day of the war and −5.5% (p = 0.02) on the first day of the ceasefire, but no window is significant after the Holm adjustment (smallest adjusted p = 0.22). With the 2019–2025 beta and distribution, all Bitcoin p-values are 0.11 or higher, and no window for either asset survives the adjustment. These historical comparisons and multiple-testing adjustments are exploratory and remain affected by changing volatility and overlapping windows. With Bitcoin's 4 p.m. ET price, the two-day abnormal return is +6.0% after the start of the war (p = 0.04; Holm-adjusted across six events, 0.25) and −0.3% after the ceasefire (p = 0.90).
-- **Baur and Lucey (2010) test, 2019–2025:** gold's total beta is not significantly different from zero on normal days or on days in the worst 2.5–5% and 1–2.5% of stock-market returns, and slightly positive on the worst 1% of days (0.14, p = 0.003). Both assets' results hold when the COVID crash is excluded.
+- **Event study:** oil moved +10.2% in the two days after the war began and −10.0% after the ceasefire, confirming that the event dates capture real shocks. After adjusting for the number of comparisons, no event-day move by Bitcoin or gold stands out.
 - **Correlations** are supporting evidence only, because they rise mechanically with volatility (Forbes and Rigobon, 2002).
 
 ## Data
