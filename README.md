@@ -4,7 +4,7 @@ When a war or crisis hits, investors look for assets that protect them from fall
 
 **Full analysis:** [analysis.ipynb](analysis.ipynb) (Python)
 
-![How closely gold and Bitcoin followed the stock market in seven market shocks since 2019](beta_by_episode.png)
+![How closely gold and Bitcoin followed the stock market in seven market shocks since 2019](figures/beta_by_episode.png)
 
 *Each dot shows how closely an asset followed the US stock market during a market shock (0 means no connection; 1 means it moved as much as stocks, in the same direction). Lines show the range of uncertainty. Gold usually sits near or below zero; in 2026 it jumped to about 1.*
 
@@ -26,7 +26,7 @@ Bitcoin behaved like a risky investment rather than a safe haven, as it has sinc
 
 **Bitcoin and gold moved more closely together during the conflict.** Their shared link to stocks explains part of this, but not all.
 
-![Gold's link to the stock market over rolling 60-trading-day windows, 2024-2026](gold_rolling_beta.png)
+![Gold's link to the stock market over rolling 60-trading-day windows, 2024-2026](figures/gold_rolling_beta.png)
 
 *Gold's link to the US stock market, measured over moving 60-trading-day windows (0 means no connection; 1 means it moved as much as stocks). Dashed lines mark the six 2026 events (red for escalation, green for de-escalation). The link began rising in late 2025 and peaked during the conflict.*
 
@@ -80,7 +80,7 @@ Whether an asset behaves as a hedge is not a fixed fact; it can change from one 
 
 1. Install the packages:
    ```
-   pip install massive pandas numpy matplotlib statsmodels scipy yfinance jupyter
+   pip install -r requirements.txt
    ```
 2. Open `analysis.ipynb` in Jupyter and run all cells. You will be asked for your own Massive API key; it is not stored in the notebook.
 

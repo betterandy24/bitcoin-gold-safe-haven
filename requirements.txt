@@ -1,0 +1,8 @@
+massive
+pandas
+numpy
+matplotlib
+statsmodels
+scipy
+yfinance
+jupyter
