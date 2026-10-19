@@ -32,7 +32,19 @@ Bitcoin behaved like a risky investment rather than a safe haven, as it has sinc
 
 ## What this means
 
-Whether an asset behaves as a hedge is not a fixed fact; it can change from one crisis to the next, so investors should not assume gold will always move independently of stocks. I could not establish why 2026 was different; a shared reaction to news about long-term interest rates does not appear to be the main reason, although this check cannot rule it out. One possibility, which I did not test, is that some investors sold gold to lock in profits after its sharp rise in 2025.
+- **Portfolio construction.** Whether an asset behaves as a hedge is not a fixed fact. Gold's
+  link with US stocks went from close to zero to roughly one-for-one within months, so an
+  allocation that relies on gold to offset stock losses should be checked against its recent
+  behaviour, not only its long-run average.
+- **Risk management.** Stress tests that keep correlations at their historical levels can
+  miss the case where diversifiers fall with stocks. On both sharp market falls during the
+  2026 conflict, gold fell too. Scenarios in which the usual diversifiers stop working
+  belong in a stress test.
+- **Crypto allocations.** Since 2019 Bitcoin has moved about one-for-one with US stocks, and
+  by more on their worst days. In a sell-off it adds to losses rather than offsetting them,
+  so it should be sized as a risky asset, not as a hedge.
+
+I could not establish why 2026 was different; a shared reaction to news about long-term interest rates does not appear to be the main reason, although this check cannot rule it out. One possibility, which I did not test, is that some investors sold gold to lock in profits after its sharp rise in 2025.
 
 ## How I did it
 
