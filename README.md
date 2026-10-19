@@ -2,7 +2,8 @@
 
 When a war or crisis hits, investors look for assets that protect them from falling stocks. Research separates two kinds of protection: a **hedge** does not move with stocks on average, and a **safe haven** holds its value on the days when stocks fall sharply. Gold is the classic example of both, and some people argue that Bitcoin is "digital gold". This project uses the 2026 Strait of Hormuz crisis, when fighting around one of the world's most important oil routes sent oil prices sharply higher, to test whether either of them actually behaved this way.
 
-**Full analysis:** [analysis.ipynb](analysis.ipynb) (Python)
+**Full analysis:** [analysis.ipynb](analysis.ipynb) (Python)  
+**One-page summary:** [summary.pdf](summary.pdf)
 
 ![How closely gold and Bitcoin followed the stock market in seven market shocks since 2019](figures/beta_by_episode.png)
 
